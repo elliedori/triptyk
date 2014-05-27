@@ -1,17 +1,30 @@
-### Purpose
-The Sinatra Skeleton:
+# Bands Example App
 
-1. Provides a foundation for building challenges.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
-4. Demonstrates that it is not **required** that all models in `app/models` be
+> **Note**: The branch contains an example app built with DBC's Sinatra skeleton. If you're building a new app or challenge, you'll probably want to use the [master](/../../tree/master) branch, which doesn't include any example models, controllers, views or tests.
+
+### Purpose
+
+1. Provides an example implementation of basic CRUD functionality, using the DBC Sinatra skeleton.
+2. Demonstrates that it is not **required** that all models in `app/models` be
    `ActiveRecord` backed!
-5. Gives bare-bones RSpec skeleton wherewith to start building the practice of testing
+3. Includes a suite of RSpect tests that demonstrate unit, controller and integration testing.
 
 ### Quickstart
 
 1.  `bundle install`
-2.  `shotgun config.ru`
+2.  `rake db:create`
+3.  `rake db:migrate`
+4.  `rake db:seed`
+5.  `shotgun config.ru`
+6.  Open [http://localhost:9393/bands](http://localhost:9393/bands)
+
+#### Running Tests
+**Note**: Be sure to run `rake db:test:prepare` before running tests.
+
+To run the entire suite of tests: `rspec`
+
+To run a specific example: `rspec spec/band_spec.rb`
+
 
 ### Contributing
 
