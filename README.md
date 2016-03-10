@@ -1,30 +1,35 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+### AJAX Checkpoint Challenge
 
-### Purpose
-The Sinatra Skeleton:
+In this challenge, using the Sinatra Skeleton, you will be building a simple TODO list application with Create, Read and Delete functionality and AJAX-ifying a working Sinatra app.
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+#### Release 0
 
-### Quickstart
+To get started, go ahead and clone the sinatra skeletion. Build necessary migrations, models and seed files required for your TODO list application. Next, install your dependencies and create, migrate and seed your database.
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+#### Release 1
 
-As needed, create models & migrations with the `rake` tasks:
+User when visits the root page( / ) should see the following web page (with atleast two tasks each having a DELETE button and a link to create a new task).
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+![create-new-task](pic1.png)
 
-### Contributing
+#### Release 2
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
+1. Clicking on the link [Create a new Task] should render the form to create a new task and remove/hide the link as shown below.  AJAX the rendering of the form that's used to create a new task so that it is dynamically loaded. 
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+![render-form](pic2.png)
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+#### Release 3
+
+1. Upon submission of this form that was dynamically added, we want to append the new task to the existing list of tasks, like so using AJAX:
+
+![render-form](pic3.png)
+
+#### Release 4
+
+Lastly, make the delete button functional. Clicking the DELETE button should delete the associated task from the database and consequently remote the task from the DOM using AJAX. 
+
+#### Release 5
+
+Done? Refactor your JavaScript to make it more organized. Also, double check your controller methods to make sure they are as organized as possible and control for if a method is evaluated from an AJAX call or a normal HTTP request.
+
+Finished? Be sure to commit your code, but please don't push it up to Github until time is called.
