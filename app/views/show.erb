@@ -1,13 +1,19 @@
 <!-- Their information -->
+<%= @user.gravator %><br>
+<%= @user.display_name %><br>
+<%= @user.handle %><br>
 
+<br>
 
 <ul>
 <% @quots.each do |quot| %>
-  <%= quot.user.gravator %>
-  <h3><%= quot.user.display_name %></h3>
-  <h6><%= quot.user.handle %></h6>
   <li><%= quot.text %></li>
+  <br><br>
   <!-- requot button here -->
 
 <% end %>
 </ul>
+
+<a href="/user/<%= @user.id %>/followers">Followers</a>
+<a href="/user/<%= @user.id %>/following">Following</a>
+

@@ -15,6 +15,18 @@ class User < ActiveRecord::Base
 
   include BCrypt
 
+  def authenticate(email, password)
+    user = User.find_by(email: email)
+    if user
+      if user.password == password
+        return user
+      else
+        return nil
+      end
+    end
+    return user
+  end
+
   def password
     @password ||= Password.new(password_hash)
   end

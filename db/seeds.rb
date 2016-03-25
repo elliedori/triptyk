@@ -6,4 +6,5 @@ user1 = User.find(1)
 user2 = User.find(2)
 user3 = User.find(3)
 
-# user1.followers << user2
+user1.followers << user2
+user1.followers << user3
