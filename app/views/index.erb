@@ -1,0 +1,9 @@
+<ul>
+<% @quots.each do |quot| %>
+  <%= quot.user.gravator %>
+  <h3><%= quot.user.display_name %></h3>
+  <h6><%= quot.user.handle %></h6>
+  <li><%= quot.text %></li>
+
+<% end %>
+</ul>
