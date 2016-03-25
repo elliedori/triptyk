@@ -1,9 +1,16 @@
+<form action = '/home/quots' method="post">
+
+</form>
+
+
 <ul>
 <% @quots.each do |quot| %>
   <%= quot.user.gravator %>
-  <h3><%= quot.user.display_name %></h3>
+  <h3><a href=/user/<%= quot.user.id%>><%= quot.user.display_name %></a></h3>
   <h6><%= quot.user.handle %></h6>
   <li><%= quot.text %></li>
-
+  <form action = '/requots' method = 'post'>
+  <!-- requot button here -->
+  </form>
 <% end %>
 </ul>

@@ -43,6 +43,9 @@ end
 
 get '/user/:id' do
   @user = User.find(params[:id])
+  @followers = @user.followers
+  @following = @user.following
+  @quots = @user.quots
   erb :show
 end
 
@@ -102,9 +105,18 @@ post '/user/:id' do
   redirect "/user/#{params[:id]}"
 end
 
-post '/home/quots/new' do
+post '/home/quots' do
   quot = Quot.new(text: params[:text], user_id: sessions[:id])
   if quot.save
     redirect '/home'
   end
 end
+
+post '/requots' do
+  requot = quot.find(params[:quots_id])
+  user = User.find(session[:id])
+  user.requots << requot
+  redirect ('/home')
+end
+
+
