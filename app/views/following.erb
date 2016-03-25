@@ -1,0 +1,9 @@
+<ul>
+<% @following.each do |followee| %>
+
+<%= followee.gravator %>
+<h3><a href=/user/<% followee.id%>><%= followee.display_name %></a></h3>
+<h6><%= followee.handle %></h6>
+<br>
+<% end %>
+</ul>
