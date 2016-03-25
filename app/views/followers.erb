@@ -1,0 +1,8 @@
+<ul>
+<% @followers.each do |follower| %>
+  <%= follower.gravator %>
+  <h3><a href=/user/<%= follower.id%>><%= follower.display_name %></a></h3>
+  <h6><%= follower.handle %></h6>
+  <br>
+<% end %>
+</ul>
