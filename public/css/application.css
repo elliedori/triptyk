@@ -12,6 +12,10 @@
           box-sizing: border-box;
 }
 
+.main {
+  clear:both;
+}
+
 header {
   font-family: 'Raleway', sans-serif;
   width: 800px;
@@ -93,6 +97,7 @@ footer {
   width: 700px;
   margin: auto;
   margin-top: 20px;
+  clear:both;
 }
 
 .quot-frame {
@@ -144,7 +149,7 @@ small {
 
 /*http://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css*/
 
-input[type=text] {
+input[type=text], input[type=password] {
     padding:5px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
@@ -213,3 +218,32 @@ input[type=submit]:hover {
   font-size: 14px;
   float: right;
 }
+
+.register {
+  float:right;
+  font-size: 72px;
+}
+
+.registration-form {
+  margin: auto;
+  padding-top: 50px;
+  width: 400px;
+}
+
+.registration-form input {
+  font-family: Raleway;
+  font-size: 24px;
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.registration-form label {
+  display: inline-block;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: bold;
+}
+
