@@ -11,9 +11,11 @@ class User < ActiveRecord::Base
 
   has_many :tweets
   # people that follow this user
-  has_many :followers, through: :relationships, class_name: "User"
+  has_many :follower_relationships, class_name: "Relationship", foreign_key: "follower_id"
+  has_many :followers, through: :follower_relationships, class_name: "User"
   # people that this user follows
-  has_many :followees, through: :relationships, class_name: "User"
+  has_many :followee_relationships, class_name: "Relationship", foreign_key: "followee_id"
+  has_many :followees, through: :followee_relationships, class_name: "User"
 
   def password
     @password ||= Password.new(password_hash)
