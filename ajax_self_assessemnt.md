@@ -1,4 +1,4 @@
-### AJAX Todo List Challenge
+### AJAX Checkpoint Challenge
 
 In this challenge, using the Sinatra Skeleton, you will be building a simple TODO list application with Create, Read and Delete functionality and AJAX-ifying a working Sinatra app.
 
@@ -31,3 +31,5 @@ Lastly, make the delete button functional. Clicking the DELETE button should del
 #### Release 5
 
 Done? Refactor your JavaScript to make it more organized. Also, double check your controller methods to make sure they are as organized as possible and control for if a method is evaluated from an AJAX call or a normal HTTP request.
+
+Finished? Be sure to commit your code, but please don't push it up to Github until time is called.
