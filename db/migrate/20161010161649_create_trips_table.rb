@@ -3,5 +3,6 @@ class CreateTripsTable < ActiveRecord::Migration
     create_table :trips do |t|
       t.string :user_id
       t.string :destination_id
+    end
   end
 end
