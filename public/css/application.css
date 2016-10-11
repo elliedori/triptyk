@@ -3,6 +3,9 @@ body {
   position: absolute;
   top: 0px;
   max-width: 960px;
+}
+
+.main_content {
   background-image: url("http://dreamland.news/wp-content/uploads/2016/05/San-Francisco-California-by-Unplash-at-Pixabay.jpg");
   background-repeat: no-repeat;
   background-size: cover;
