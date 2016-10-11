@@ -1,0 +1,31 @@
+body {
+  background-color: white;
+  font-family:  Verdana;
+}
+
+header {
+  background-color: #e8f4f8;
+  vertical-align: baseline;
+}
+
+.container {
+  width: 1000px;
+  height: 1000px;
+  margin-top: 100px;
+  position: relative;
+}
+
+#search_form {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  z-index: 10;
+}
+
+#main_image {
+  top: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
