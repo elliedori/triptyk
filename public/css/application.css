@@ -1,0 +1,51 @@
+body {
+  font-family:  Helvetica;
+  position: absolute;
+  top: 0px;
+  max-width: 960px;
+}
+
+.main_content {
+  background-image: url("http://dreamland.news/wp-content/uploads/2016/05/San-Francisco-California-by-Unplash-at-Pixabay.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  vertical-align: center;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  width: 100%;
+}
+
+.container {
+  background-color: #e8f4f8;
+}
+.container {
+  width: 1000px;
+  height: 1000px;
+  margin-top: 140px;
+  position: relative;
+}
+/*
+#search_form {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  z-index: 10;
+}
+*/
+#main_image {
+  background: url(http://dreamland.news/wp-content/uploads/2016/05/San-Francisco-California-by-Unplash-at-Pixabay.jpg) no-repeat fixed center;
+  width: 800px;
+}
+/*#main_image {
+  width: 100%;
+  top: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}*/
+
