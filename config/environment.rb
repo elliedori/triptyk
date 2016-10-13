@@ -2,11 +2,13 @@
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+require_relative '../config.rb'
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
+require 'unsplash'
 
 require 'uri'
 require 'pathname'
@@ -43,3 +45,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+# Set up Unsplash API
+Unsplash.configure do |config|
+  config.application_id = APP_ID
+  config.application_secret = SECRET
+  config.application_redirect_uri = "http://localhost:9393/auth/callback"
+end
