@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family:  Helvetica;
   position: absolute;
   top: 0px;
@@ -27,7 +27,7 @@ header {
   height: 1000px;
   margin-top: 140px;
   position: relative;
-}
+}*/
 /*
 #search_form {
   width: 500px;
@@ -36,10 +36,10 @@ header {
   z-index: 10;
 }
 */
-#main_image {
+/*#main_image {
   background: url(http://dreamland.news/wp-content/uploads/2016/05/San-Francisco-California-by-Unplash-at-Pixabay.jpg) no-repeat fixed center;
   width: 800px;
-}
+}*/
 /*#main_image {
   width: 100%;
   top: 20;
