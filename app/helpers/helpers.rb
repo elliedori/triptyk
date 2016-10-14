@@ -9,11 +9,12 @@ helpers do
   end
 
   def login(user)
-    session[:id] = @user.id
+    session[:id] = user.id
   end
 
   def logout
     session[:id] = nil
+    redirect '/'
   end
 
 end

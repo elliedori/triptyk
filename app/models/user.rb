@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
-  def authenticate(email, password_attempt)
+  def self.authenticate(email, password_attempt)
     current_user = User.find_by(email: email)
     if current_user && current_user.password == password_attempt
       return current_user
