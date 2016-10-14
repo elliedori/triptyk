@@ -1,0 +1,8 @@
+<% if logged_in? %>
+  <span><%= User.find(session[:id]).first_name %> <%= User.find(session[:id]).last_name %></span>
+  <a href='logout'>Log out</a>
+<% else %>
+  <a href='login'>Log in</a>
+  <a href='users/new'>Create account</a>
+<% end %>
+
