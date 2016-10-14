@@ -1,6 +1,6 @@
-User.create(first_name: "Ellie")
-User.create(first_name: "Ana")
-User.create(first_name: "Maia")
+User.create(first_name: "Ellie", password: "password")
+User.create(first_name: "Ana", password: "password")
+User.create(first_name: "Maia", password: "password")
 
 Destination.create(name: "Zion")
 Destination.create(name: "Arches")
