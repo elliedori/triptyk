@@ -1,10 +1,5 @@
 get '/' do
-  @photo = Unsplash::Photo.search("Cambodia")
-  # can access photos by index: 
-puts "*****"
-  p @photo.length
-  @link = @photo[2].urls["regular"]
-  # @link = @photo.first.urls["regular"]
-  p @link
+  @photos_json_obj = Unsplash::Photo.search("Cambodia")
+  @link = @photos_json_obj.first.urls["regular"]
   erb :index
 end
