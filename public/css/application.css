@@ -1,4 +1,10 @@
-/*body {
+#home_image {
+  width: 100%;
+}
+
+/*
+
+body {
   font-family:  Helvetica;
   position: absolute;
   top: 0px;
@@ -27,7 +33,7 @@ header {
   height: 1000px;
   margin-top: 140px;
   position: relative;
-}*/
+}
 /*
 #search_form {
   width: 500px;
@@ -49,3 +55,4 @@ header {
   position: absolute;
 }*/
 
+*/
