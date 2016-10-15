@@ -15,3 +15,8 @@ delete '/my_wanderlist/:destination' do
   unwanted_trip.destroy
   redirect '/my_wanderlist'
 end
+
+
+get '/users/new' do
+  erb:'users/new'
+end
