@@ -11,6 +11,7 @@ gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 gem 'json'
 gem 'rake'
+gem 'pry'
 
 gem 'shotgun', '~>0.9.1'
 gem 'unsplash'
@@ -25,4 +26,9 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+end
+
+group :api_helpers do
+  gem 'httparty'
+  gem 'dotenv'
 end
