@@ -27,9 +27,10 @@ post '/users' do
   else
     params.delete("confirm_password")
     new_user = User.new(params)
+      if !new_user.save
+       "Looks like you already have an account associated with that email, please log in."
+      end
+    redirect '/login'
   end
 
-  if !new_user.save
-    "Looks like you already have an account associated with that email, please log in."
-  end
 end
