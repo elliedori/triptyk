@@ -1,10 +1,10 @@
 <div clas="container">
-  <form id="search_form" action="." method="POST">
-    <input type="test" name="destination" placeholder="Where to?"/>
+  <form id="search_form" action="/destinations" method="POST">
+    <input type="text" name="destination" placeholder="Where to?"/>
     <button type="submit">Take me there</button>
   </form>
 
   <div id="main_image">
-  <img src= <%= @link %> alt="Image of place"/>
+  <img id="home_image" src="https://hd.unsplash.com/photo-1452421822248-d4c2b47f0c81" alt="Image of place"/>
   </div>
 </div>

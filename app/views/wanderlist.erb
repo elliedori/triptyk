@@ -1,0 +1,6 @@
+<div clas="container">
+  <% @trips.each do |trip| %>
+  <h2><a href="../destinations/<%= trip.destination.name %>"><%= trip.destination.name %></a></h2>
+  <% end %>
+
+</div>
