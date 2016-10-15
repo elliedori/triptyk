@@ -1,5 +1,9 @@
 <div clas="container">
-  <h1><%= @destination %></h1>
+  <h1><%= @destination.capitalize %></h1>
+  <form action="../my_wanderlist/<%= @destination %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+    <button type="submit">Add to my wander list</button>
+  </form>
   <div id="main_image">
   <img src= <%= @link %> alt="Image of place"/>
   </div>

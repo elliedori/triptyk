@@ -5,7 +5,7 @@ end
 
 get '/destinations/:name' do
   p params
-  @destination = params[:name].capitalize
+  @destination = params[:name]
   @photos_json_obj = Unsplash::Photo.search(@destination)
   @link = @photos_json_obj.first.urls["regular"]
   erb :'/destinations/show'
