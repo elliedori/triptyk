@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   has_many :trips
   has_many :destinations, through: :trips
 
+  validates :email, uniqueness: true
+
   def password
     @password ||= BCrypt::Password.new(password_hash)
   end
