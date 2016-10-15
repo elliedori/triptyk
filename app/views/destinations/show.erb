@@ -1,18 +1,18 @@
 <div clas="container">
   <h1><%= @destination.capitalize %></h1>
-  <%= @current_users_list.include?(@destination) %>
-  <% if logged_in? && !@current_users_list.include?(@destination) %>
-    <form action="../my_wanderlist/<%= @destination %>" method="POST">
+  <% if logged_in? %>
+    <% if !@current_users_list.include?(@destination) %>
+      <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="put">
       <button type="submit">Add to my wander list</button>
-    </form>
-  <% end %>
+      </form>
 
-  <% if logged_in? && @current_users_list.include?(@destination) %>
-    <form action="../my_wanderlist/<%= @destination %>" method="POST">
+    <% else %>
+      <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="delete">
       <button type="submit">Remove from my wander list</button>
     </form>
+    <% end %>
   <% end %>
 
 
