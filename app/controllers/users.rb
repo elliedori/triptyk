@@ -11,10 +11,7 @@ end
 
 delete '/my_wanderlist/:destination' do
   destination_id = Destination.find_by(name: params[:destination])
-  p destination_id
   unwanted_trip = Trip.where(user_id: session[:id], destination_id: destination_id).first
-
-  p unwanted_trip
   unwanted_trip.destroy
   redirect '/my_wanderlist'
 end
