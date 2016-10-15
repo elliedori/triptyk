@@ -17,4 +17,5 @@ helpers do
     redirect '/'
   end
 
+  #write helper method to parse out images into groups of 3 under Unsplash class"
 end
