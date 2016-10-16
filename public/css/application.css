@@ -49,7 +49,12 @@ button.unselected {
   width: 50px;
   border: none;
   position: fixed;
-  margin-top: 0%;
+  margin-top: -3.8%;
+  margin-left: 2%;
+  
+}
+button.unselected:focus {
+  outline:0;
 }
 
 button.selected {
@@ -62,7 +67,12 @@ button.selected {
   width: 50px;
   border: none;
   position: fixed;
-  margin-top: 0%;
+  margin-top: -3.8%;
+  margin-left: 2%;
+}
+
+button.selected:focus {
+  outline:0;
 }
 
 
