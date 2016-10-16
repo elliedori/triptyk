@@ -5,7 +5,7 @@ end
 
 put '/my_wanderlist/:destination' do
     destination = Destination.find_or_create_by(name: params[:destination])
-    new_trip = Trip.create(user_id: session[:id], destination_id: destination.id)
+    new_trip = Trip.find_or_create_by(user_id: session[:id], destination_id: destination.id)
     redirect '/my_wanderlist'
 end
 
