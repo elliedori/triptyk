@@ -1,5 +1,27 @@
+body {
+  font-family: Courier, monospace;
+}
+
+h1 {
+  font-family: Geneva;
+}
+
+#home-container {
+  position: relative;
+}
+
 #home_image {
   width: 100%;
+}
+
+#form-container {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#location-search {
 }
 
 /*
