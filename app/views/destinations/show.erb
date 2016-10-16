@@ -2,22 +2,22 @@
 
   <h2 id="place-name"><%= @destination.capitalize %>
 
-  <span>
-  <% if logged_in? %>
-    <% if !@current_users_list.include?(@destination) %>
-      <form action="../my_wanderlist/<%= @destination %>" method="POST">
-      <input type="hidden" name="_method" value="put">
-      <button class="wanderlist-button unselected" type="submit"><!-- <img src='../images/heart_unselected.png'> --></button>
-      </form>
+    <span>
+    <% if logged_in? %>
+      <% if !@current_users_list.include?(@destination) %>
+        <form action="../my_wanderlist/<%= @destination %>" method="POST">
+        <input type="hidden" name="_method" value="put">
+        <button class="wanderlist-button unselected" type="submit"><!-- <img src='../images/heart_unselected.png'> --></button>
+        </form>
 
-    <% else %>
-      <form action="../my_wanderlist/<%= @destination %>" method="POST">
-      <input type="hidden" name="_method" value="delete">
-      <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
-    </form>
+      <% else %>
+        <form action="../my_wanderlist/<%= @destination %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
+      </form>
+      <% end %>
     <% end %>
-  <% end %>
-  </span>
+    </span>
   </h2>
 
   <img src= <%= @link %> alt="Image of place"/>
