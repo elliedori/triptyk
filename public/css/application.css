@@ -11,37 +11,22 @@ h1 {
   font-family: Geneva;
 }
 
-/*#home-container {
-  position: relative;
-}*/
-
 img {
   width: 100%;
-/*  margin-right: 10%;
-  margin-left: 10%;*/
 }
 
 .account {
   margin: 20 auto;
 }
 
-#search-form {
-  position: absolute;
-  margin-left: 45%;
-  margin-top: 40%;
-  text-align: center;
-
-}
 
 button {
   border-radius: 4px;
-
 }
 
 .wanderlist {
   /*margin-left: 200px;*/
   float: right;
-
 }
 
 #header {
@@ -55,6 +40,13 @@ button {
   height: 22%;
   padding: 0;
   margin: 0;
+}
+
+#search-form {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 40%;
+  text-align: center;
 }
 
 #menu {
