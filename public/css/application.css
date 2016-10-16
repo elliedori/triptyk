@@ -34,7 +34,7 @@ button {
   box-shadow: none;
 }
 
-.wanderlist {
+.wanderlist-button {
   /*margin-left: 200px;*/
   float: right;
 }
@@ -96,6 +96,11 @@ header {
 
 .container {
 
+}
+
+.wanderlist {
+  margin-bottom: 80%;
+  
 }
 
 #search-form {

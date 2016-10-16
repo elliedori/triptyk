@@ -7,13 +7,13 @@
     <% if !@current_users_list.include?(@destination) %>
       <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="put">
-      <button class="wanderlist unselected" type="submit"><!-- <img src='../images/heart_unselected.png'> --></button>
+      <button class="wanderlist-button unselected" type="submit"><!-- <img src='../images/heart_unselected.png'> --></button>
       </form>
 
     <% else %>
       <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="delete">
-      <button class="wanderlist selected" type="submit"><!-- Remove from my wander list --></button>
+      <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
     </form>
     <% end %>
   <% end %>
