@@ -42,13 +42,18 @@ button {
 button.unselected {
   background-image: url(../images/heart_unselected.png);
   background-repeat: no-repeat;
+  background-size: 40%;
   background-position: 50% 50%;
   background-color: none;
   height: 50px;
   width: 50px;
   border: none;
+  float: left;
+  position: fixed;
+  margin-top: 0%;
+  margin-right: 80%;
 }
-
+/*
 button.selected {
   background-image: url(../images/heart_selected.png);
   background-repeat: no-repeat;
@@ -58,7 +63,7 @@ button.selected {
   width: 50px;
   border: none;
 }
-
+*/
 
 header {
   text-align: center;
