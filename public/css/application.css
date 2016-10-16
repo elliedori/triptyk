@@ -39,6 +39,27 @@ button {
   float: right;
 }
 
+button.unselected {
+  background-image: url(../images/heart_unselected.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: none;
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+
+button.selected {
+  background-image: url(../images/heart_selected.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: none;
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+
+
 header {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
