@@ -19,6 +19,13 @@ img {
   margin: 20 auto;
 }
 
+#place-name {
+  position: fixed;
+  float: left;
+  margin-top: 10%;
+  margin-left: 0.5%;
+}
+
 button {
   border-radius: 4px;
   border-color: #DB7093;

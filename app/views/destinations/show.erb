@@ -1,9 +1,8 @@
 <div clas="container">
 
-  <div id="main_image">
-  <h2><%= @destination.capitalize %></h2>
+  <h2 id="place-name"><%= @destination.capitalize %></h2>
   <img src= <%= @link %> alt="Image of place"/>
-  </div>
+
 
   <section>
   <% if logged_in? %>
