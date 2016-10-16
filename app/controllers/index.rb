@@ -20,3 +20,6 @@ get '/logout' do
   logout
 end
 
+not_found do
+  erb :not_found
+end
