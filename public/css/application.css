@@ -49,6 +49,11 @@ button {
   text-align: center;
 }
 
+form {
+  margin-left: 33%;
+  margin-top: 20%;
+}
+
 #menu {
   float: right;
   text-align: right;
