@@ -15,3 +15,22 @@ delete '/my_wanderlist/:destination' do
   unwanted_trip.destroy
   redirect '/my_wanderlist'
 end
+
+
+get '/users/new' do
+  erb:'users/new'
+end
+
+post '/users' do
+  if params[:password] != params[:confirm_password]
+    "Passwords do not match, please try again."
+  else
+    params.delete("confirm_password")
+    new_user = User.new(params)
+      if !new_user.save
+       "Looks like you already have an account associated with that email, please log in."
+      end
+    redirect '/login'
+  end
+
+end

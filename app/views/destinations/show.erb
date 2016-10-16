@@ -1,22 +1,24 @@
 <div clas="container">
-  <h1><%= @destination.capitalize %></h1>
+
+  <h2 id="place-name"><%= @destination.capitalize %>
+
+  <span>
   <% if logged_in? %>
     <% if !@current_users_list.include?(@destination) %>
       <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="put">
-      <button type="submit">Add to my wander list</button>
+      <button class="wanderlist-button unselected" type="submit"><!-- <img src='../images/heart_unselected.png'> --></button>
       </form>
 
     <% else %>
       <form action="../my_wanderlist/<%= @destination %>" method="POST">
       <input type="hidden" name="_method" value="delete">
-      <button type="submit">Remove from my wander list</button>
+      <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
     </form>
     <% end %>
   <% end %>
+  </span>
+  </h2>
 
-
-  <div id="main_image">
   <img src= <%= @link %> alt="Image of place"/>
-  </div>
 </div>
