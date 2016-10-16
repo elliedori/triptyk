@@ -2,27 +2,53 @@ body {
   font-family: Courier, monospace;
 }
 
+a {
+  color: #DB7093;
+}
+
 h1 {
   font-family: Geneva;
 }
 
-#home-container {
+/*#home-container {
   position: relative;
-}
+}*/
 
-#home_image {
+#home-image {
   width: 100%;
+/*  margin-right: 10%;
+  margin-left: 10%;*/
 }
 
-#form-container {
+form {
   position: absolute;
   margin-left: 45%;
   margin-top: 40%;
   text-align: center;
 }
 
-#location-search {
+button {
+  border-radius: 4px;
 }
+
+header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+/*#location-search {
+  background-color rgba (0, 0, 0, 0.1);
+  color: white;
+  border: none;
+}*/
 
 /*
 body {
