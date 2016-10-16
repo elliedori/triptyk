@@ -1,6 +1,4 @@
 post '/destinations' do
-  puts "********"
-  p params
   @destination = params[:destination].downcase
   @destination.gsub!(" ", "%20")
   redirect "/destinations/#{@destination}"
@@ -15,6 +13,6 @@ get '/destinations/:name' do
     @current_users_list = current_user.destinations.pluck(:name) if logged_in?
     erb :'/destinations/show'
   else
-    "Please enter a less specific location"
+    "Please enter a more general location"
   end
 end

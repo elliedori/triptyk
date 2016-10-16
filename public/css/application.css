@@ -20,15 +20,11 @@ img {
 }
 
 button {
-  /*border-radius: 4px;*/
+  border-radius: 4px;
   border-color: #DB7093;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
-
-  /*border: 0;*/
-  /*background: none;*/
   box-shadow: none;
-  border-radius: 0px;
 }
 
 .wanderlist {
@@ -36,7 +32,7 @@ button {
   float: right;
 }
 
-#header {
+header {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -47,6 +43,10 @@ button {
   height: 20%;
   padding: 0;
   margin: 0;
+}
+
+.container {
+
 }
 
 #search-form {

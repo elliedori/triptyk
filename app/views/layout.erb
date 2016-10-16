@@ -18,16 +18,14 @@
   <title>Triptyk</title>
 </head>
 <body>
-  <div id="header">
   <header>
     <h1><a id="title" href="../">Triptyk</a></h1>
     [ not all who wander are lost ]
     <br/><br/>
-    <span id="menu">
-     <%= erb :'partials/_header' %>
-    </span>
+    <div id="menu">
+     <%= erb :'partials/_menu' %>
+    </div>
   </header>
-  </div>
   <div class="main_content">
     <%= yield %>
   </div>

@@ -1,5 +1,11 @@
 <div clas="container">
-  <h1><%= @destination.capitalize %></h1>
+
+  <div id="main_image">
+  <h2><%= @destination.capitalize %></h2>
+  <img src= <%= @link %> alt="Image of place"/>
+  </div>
+
+  <section>
   <% if logged_in? %>
     <% if !@current_users_list.include?(@destination) %>
       <form action="../my_wanderlist/<%= @destination %>" method="POST">
@@ -14,9 +20,5 @@
     </form>
     <% end %>
   <% end %>
-
-
-  <div id="main_image">
-  <img src= <%= @link %> alt="Image of place"/>
-  </div>
+  </section>
 </div>
