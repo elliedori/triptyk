@@ -44,6 +44,12 @@ header {
   margin: 0;
 }
 
+#header-partials {
+  float: right;
+  text-align: right;
+  margin-top: 0px;
+}
+
 /*#location-search {
   background-color rgba (0, 0, 0, 0.1);
   color: white;
