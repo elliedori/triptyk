@@ -6,7 +6,11 @@ end
 put '/my_wanderlist/:destination' do
     destination = Destination.find_or_create_by(name: params[:destination])
     new_trip = Trip.find_or_create_by(user_id: session[:id], destination_id: destination.id)
-    redirect "/destinations/#{params[:destination]}"
+    if request.xhr?
+      
+    else
+      redirect "/destinations/#{params[:destination]}"
+    end
 end
 
 delete '/my_wanderlist/:destination' do
