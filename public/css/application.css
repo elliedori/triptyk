@@ -37,10 +37,6 @@ button {
 .wanderlist-button {
   /*margin-left: 200px;*/
   float: right;
-}
-
-button.unselected {
-  background-image: url(../images/heart_unselected.png);
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
@@ -51,6 +47,20 @@ button.unselected {
   position: fixed;
   margin-top: -4.4%;
   margin-left: 2%;
+}
+
+button.unselected {
+  background-image: url(../images/heart_unselected.png);
+/*  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 50% 50%;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  border: none;
+  position: fixed;
+  margin-top: -4.4%;
+  margin-left: 2%;*/
   
 }
 button.unselected:focus {
@@ -59,7 +69,7 @@ button.unselected:focus {
 
 button.selected {
   background-image: url(../images/heart_selected.png);
-  background-repeat: no-repeat;
+/*  background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
   background-color: transparent;
@@ -68,7 +78,7 @@ button.selected {
   border: none;
   position: fixed;
   margin-top: -4.4%;
-  margin-left: 2%;
+  margin-left: 2%;*/
 }
 
 /* need to anchor this to the actual title,
