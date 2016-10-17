@@ -6,14 +6,22 @@ end
 put '/my_wanderlist/:destination' do
     destination = Destination.find_or_create_by(name: params[:destination])
     new_trip = Trip.find_or_create_by(user_id: session[:id], destination_id: destination.id)
-    redirect "/destinations/#{params[:destination]}"
+    if request.xhr?
+      erb :"partials/_selected", layout: false, locals: {destination: destination.name}
+    else
+      redirect "/destinations/#{params[:destination]}"
+    end
 end
 
 delete '/my_wanderlist/:destination' do
   destination_id = Destination.find_by(name: params[:destination])
   unwanted_trip = Trip.where(user_id: session[:id], destination_id: destination_id).first
   unwanted_trip.destroy
-  redirect "/destinations/#{params[:destination]}"
+  if request.xhr?
+    erb :"partials/_unselected", layout: false, locals: {destination: params[:destination]}
+  else
+    redirect "/destinations/#{params[:destination]}"
+  end
 end
 
 
