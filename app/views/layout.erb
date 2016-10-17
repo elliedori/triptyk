@@ -11,9 +11,9 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_KEY']%>&libraries=places&callback=initMap" async defer></script>
 
   <title>Triptyk</title>
 </head>

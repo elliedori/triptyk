@@ -1,5 +1,6 @@
 post '/destinations' do
   @destination = params[:destination].downcase
+  p @destination
   @destination.gsub!(" ", "%20")
   redirect "/destinations/#{@destination}"
 end

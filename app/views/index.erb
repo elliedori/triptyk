@@ -1,8 +1,15 @@
 <div id="container">
     <form id="search-form" action="/destinations" method="POST">
-      <input id="location-search" type="text" name="destination" placeholder="Where to?"/>
+      <input id="city" class="form-radius" size="50" type="text" name="destination" placeholder="Where to?" value="<%= @destination %>" required>
       <br/><br/>
       <button type="submit">Take me there</button>
     </form>
   <img id="home-image" src="https://hd.unsplash.com/photo-1452421822248-d4c2b47f0c81" alt="Image of place"/>
 </div>
+
+<div id="map"></div>
+<!-- <div id="city"></div> -->
+
+<!--
+<form id="search-form" action="/destinations" method="POST">
+      <input id="location-search" type="text" name="destination" placeholder="Where to?"/> -->
