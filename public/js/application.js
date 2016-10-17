@@ -1,24 +1,42 @@
 $(document).ready(function() {
   createUnselectedButtonListener();
-  createSelectedButtonListener();
+  // createSelectedButtonListener();
 });
 
-var createButtonListener = function(){
-  $('#add-to-wanderlist').on('submit', function(event){
+var createUnselectedButtonListener = function(){
+  $('#heart-buttons').on('submit', function(event){
     event.preventDefault();
-    var button = $(this).children().last();
-    console.log(button)
-    var url = $(this).attr('action');
-    var method = "PUT"
+    var form = $(this).children();
+    console.log(form)
 
-    var request = $.ajax({
-      url: url,
-      method: method
-    })
+    if (form.hasClass( "add-to-wanderlist" )){
+      var button = form.children().last();
+      var url = form.attr('action');
+      var method = "PUT"
 
-    request.done(function(response){
-      console.log("Success!")
-      button.removeClass("unselected").addClass("selected")
-    })
-  });
-}
+      var request = $.ajax({
+        url: url,
+        method: method
+      })
+
+      request.done(function(response){
+        console.log("Success!")
+        $('#heart-buttons').empty().append(response);
+      })
+    }
+
+    if (form.hasClass( "remove-from-wanderlist" )){
+      var button = form.children().last();
+      var url = form.attr('action');
+      var method = "DELETE"
+
+      var request = $.ajax({
+        url: url,
+        method: method
+      })
+
+      request.done(function(response){
+        console.log("Success!")
+        $('#heart-buttons').empty().append(response);
+      })
+    }

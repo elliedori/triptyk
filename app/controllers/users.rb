@@ -7,7 +7,7 @@ put '/my_wanderlist/:destination' do
     destination = Destination.find_or_create_by(name: params[:destination])
     new_trip = Trip.find_or_create_by(user_id: session[:id], destination_id: destination.id)
     if request.xhr?
-      "../images/heart_selected.png"
+      erb :"partials/_selected", layout: false
     else
       redirect "/destinations/#{params[:destination]}"
     end
@@ -18,7 +18,7 @@ delete '/my_wanderlist/:destination' do
   unwanted_trip = Trip.where(user_id: session[:id], destination_id: destination_id).first
   unwanted_trip.destroy
   if request.xhr?
-    "../images/heart_unselected.png"
+    erb :"partials/_unselected", layout: false
   else
     redirect "/destinations/#{params[:destination]}"
   end
