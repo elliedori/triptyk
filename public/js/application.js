@@ -13,6 +13,7 @@ var createUnselectedButtonListener = function(){
       var button = form.children().last();
       var url = form.attr('action');
       var method = "PUT"
+        console.log(url)
 
       var request = $.ajax({
         url: url,
@@ -21,13 +22,15 @@ var createUnselectedButtonListener = function(){
 
       request.done(function(response){
         console.log("Success!")
-        $('#heart-buttons').empty().append(response);
+        $('#heart-buttons').children().remove();
+        $('#heart-buttons').append(response);
       })
     }
 
-    if (form.hasClass( "remove-from-wanderlist" )){
+    else {
       var button = form.children().last();
       var url = form.attr('action');
+      console.log(url)
       var method = "DELETE"
 
       var request = $.ajax({
@@ -37,6 +40,10 @@ var createUnselectedButtonListener = function(){
 
       request.done(function(response){
         console.log("Success!")
-        $('#heart-buttons').empty().append(response);
+        $('#heart-buttons').children().remove();
+        $('#heart-buttons').append(response);
       })
     }
+
+})
+};
