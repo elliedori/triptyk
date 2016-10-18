@@ -1,3 +1,13 @@
+@media screen and (max-width: 480px) {
+  body{
+    font-size: 10px;
+  }
+}
+
+* {
+  font-family: Courier, monospace;
+}
+
 body {
   font-family: Courier, monospace;
 }
@@ -7,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+#title {
   font-family: Geneva;
 }
 
@@ -20,9 +30,10 @@ img {
 }
 
 #place-name {
+  padding: 0px;
   position: fixed;
   float: left;
-  margin-top: 12%;
+  margin-top: 130px;
   margin-left: 0.5%;
 }
 
@@ -34,9 +45,10 @@ button {
   box-shadow: none;
 }
 
+
 .wanderlist-button {
   /*margin-left: 200px;*/
-  float: right;
+  margin-left: 80%;
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
@@ -44,9 +56,9 @@ button {
   height: 50px;
   width: 50px;
   border: none;
-  position: fixed;
-  margin-top: -4.4%;
-  margin-left: 2%;
+ /* position: fixed;*/
+  margin-top: -10%;
+/*  margin-left: 2%;*/
 }
 
 button.unselected {
@@ -61,7 +73,7 @@ button.unselected {
   position: fixed;
   margin-top: -4.4%;
   margin-left: 2%;*/
-  
+
 }
 button.unselected:focus {
   outline:0;
@@ -99,14 +111,14 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20%;
+  height: 125px;
   padding: 0;
   margin: 0;
 }
 
 .wanderlist {
   margin-bottom: 80%;
-  
+
 }
 
 #search-form {

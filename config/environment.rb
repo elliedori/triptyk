@@ -52,3 +52,20 @@ Unsplash.configure do |config|
   config.application_secret = ENV['SECRET']
   config.application_redirect_uri = "http://localhost:9393/auth/callback"
 end
+
+class YouTubeCustomSearch
+  include HTTParty
+
+  base_uri "https://www.googleapis.com/youtube/v3/search"
+  format :json
+  default_params part: 'snippet',
+                 type: 'video',
+                 maxResults: 1,
+                 key: ENV['GOOGLE_KEY']
+
+  def self.custom_search( query_string )
+    self.get( '',  query: { q: query_string } )
+  end
+
+end
+

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   createUnselectedButtonListener();
+
   // createSelectedButtonListener();
 });
 
@@ -47,3 +48,26 @@ var createUnselectedButtonListener = function(){
 
 })
 };
+
+function initMap(){
+ var map = new google.maps.Map(document.getElementById('map'), {
+   center: {lat: -34.397, lng: 150.644},
+   zoom: 8
+   });
+
+ var options = {
+  types: ['(cities)'],
+  // componentRestrictions: {country: "us"}
+ };
+ var input = $("#city")[0]
+ var autocomplete = new google.maps.places.Autocomplete(input, options);
+ autocomplete.bindTo('bound', map);
+
+input.keydown(function(event){
+   if(event.keyCode == 13) {
+     event.preventDefault();
+     return false;
+   }
+ });
+};
+
