@@ -1,4 +1,7 @@
 <div id="container">
+    <% if @error %>
+      <%= @error %>
+    <% end %>
     <form id="search-form" action="/destinations" method="POST">
       <input id="city" class="form-radius" size="50" type="text" name="destination" placeholder="Where to?" value="<%= @destination %>" required>
       <br/><br/>
@@ -8,8 +11,3 @@
 </div>
 
 <div id="map"></div>
-<!-- <div id="city"></div> -->
-
-<!--
-<form id="search-form" action="/destinations" method="POST">
-      <input id="location-search" type="text" name="destination" placeholder="Where to?"/> -->

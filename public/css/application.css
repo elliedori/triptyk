@@ -1,3 +1,7 @@
+* {
+  font-family: Courier, monospace;
+}
+
 body {
   font-family: Courier, monospace;
 }
@@ -7,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+#title {
   font-family: Geneva;
 }
 
@@ -61,7 +65,7 @@ button.unselected {
   position: fixed;
   margin-top: -4.4%;
   margin-left: 2%;*/
-  
+
 }
 button.unselected:focus {
   outline:0;
@@ -106,7 +110,7 @@ header {
 
 .wanderlist {
   margin-bottom: 80%;
-  
+
 }
 
 #search-form {
