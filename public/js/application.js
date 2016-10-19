@@ -60,7 +60,7 @@ function initMap(){
   // componentRestrictions: {country: "us"}
  };
  var input = $("#city")[0]
- var autocomplete = new google.maps.places.Autocomplete(input, options);
+ var autocomplete = new google.maps.places.Autocomplete(input, options).getPlace();
  autocomplete.bindTo('bound', map);
 
 input.keydown(function(event){

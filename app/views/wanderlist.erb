@@ -2,9 +2,9 @@
 
   <img src="https://static.pexels.com/photos/6675/flight-mountains-sky-flying.jpeg"/>
 
-  <div class=wanderlist">
+  <div class="wanderlist">
     <% @trips.each do |trip| %>
-    <p><a href="../destinations/<%= trip.destination.name %>"><%= trip.destination.name %></a></p>
+    <p id="liked-destination"><a href="../destinations/<%= trip.destination.name %>"><%= trip.destination.name %></a></p>
     <% end %>
   </div>
 
