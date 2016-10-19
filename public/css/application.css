@@ -1,8 +1,8 @@
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
   body{
     font-size: 10px;
   }
-}
+}*/
 
 * {
   font-family: Courier, monospace;
@@ -29,12 +29,18 @@ img {
   margin: 20 auto;
 }
 
+#location-header {
+  width: 100%;
+  position: fixed;
+}
+
+
 #place-name {
   padding: 0px;
-  position: fixed;
   float: left;
   margin-top: 130px;
   margin-left: 0.5%;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 button {
@@ -45,10 +51,16 @@ button {
   box-shadow: none;
 }
 
+#heart-buttons {
+  position: absolute;
+  display: inline-block;
+  margin-left: -24px;
+  top: 110px;
+}
 
 .wanderlist-button {
   /*margin-left: 200px;*/
-  margin-left: 80%;
+  /*margin-left: 80%;*/
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
@@ -57,7 +69,7 @@ button {
   width: 50px;
   border: none;
  /* position: fixed;*/
-  margin-top: -10%;
+  /*margin-top: 20%;*/
 /*  margin-left: 2%;*/
 }
 
@@ -114,11 +126,31 @@ header {
   height: 125px;
   padding: 0;
   margin: 0;
+  z-index: 3;
 }
 
 .wanderlist {
-  margin-bottom: 80%;
+  z-index: 3;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  width: 1170px;
+}
 
+#liked-destination {
+  /*width: calc(33% - 1em);*/
+}
+
+#error_message {
+  z-index: 3;
+  position: relative;
+  margin-top: -18%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
 }
 
 #search-form {
@@ -136,5 +168,6 @@ form {
 #menu {
   float: right;
   text-align: right;
-  margin-top: 1%
+  margin-top: 1%;
+
 }
