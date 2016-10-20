@@ -114,7 +114,6 @@ button.selected:focus {
   outline:0;
 }
 
-
 header {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
@@ -127,6 +126,14 @@ header {
   padding: 0;
   margin: 0;
   z-index: 3;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  z-index: 3;
+  padding: 4px;
 }
 
 form {
@@ -180,7 +187,7 @@ form {
 
 #search-form {
   position: absolute;
-  margin-left: 30%;
+  margin-left: 34%;
   margin-top: 40%;
   text-align: center;
 
@@ -193,5 +200,12 @@ form {
   float: right;
   text-align: right;
   margin-top: 1%;
+}
 
+#youtube {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
