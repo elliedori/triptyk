@@ -149,7 +149,7 @@ form {
   /*width: calc(33% - 1em);*/
 }
 
-#error_message {
+#error-message {
   z-index: 3;
   position: relative;
   margin-top: -18%;
@@ -158,6 +158,25 @@ form {
   font-size: 1.2em;
 }
 
+#travel-top {
+  z-index: 3;
+  position: relative;
+  margin-top: -36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+#travel-bottom {
+  z-index: 3;
+  position: relative;
+  margin-top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
 
 #search-form {
   position: absolute;
