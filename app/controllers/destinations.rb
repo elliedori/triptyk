@@ -12,6 +12,14 @@ get '/destinations/:name' do
   youtube_obj = YouTubeCustomSearch.custom_search("traditional #{@details.last} music")
   @video_id = youtube_obj["items"][0]["id"]["videoId"]
 
+  @restos = Yelp.client.search("San Francisco", {term: "#{@details.last} food", limit: 3}).businesses
+  puts "****yelp****"
+  p @restos.first
+  p @restos.first.name
+  p @restos.first.image_url
+  p @restos.first.url
+  p @restos.first.location.display_address
+
   # tries each portion of the expanded location to account for
   # very specific locations that unsplash doesn't have photos for
   @found_place = @details.find{|query| Unsplash::Photo.search(query).first }
