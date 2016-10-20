@@ -34,6 +34,10 @@ img {
   position: fixed;
 }
 
+#restos {
+  width: 100%;
+  /*justify-content: space-around;*/
+}
 
 #place-name {
   padding: 0px;
