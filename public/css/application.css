@@ -129,6 +129,11 @@ header {
   z-index: 3;
 }
 
+form {
+  margin-left: 42%;
+  margin-top: 20%;
+}
+
 .wanderlist {
   z-index: 3;
   position: relative;
@@ -153,16 +158,16 @@ header {
   font-size: 1.2em;
 }
 
+
 #search-form {
   position: absolute;
-  margin-left: 45%;
+  margin-left: 30%;
   margin-top: 40%;
   text-align: center;
-}
 
-form {
-  margin-left: 42%;
-  margin-top: 20%;
+}
+#city {
+  width: 60%;
 }
 
 #menu {
