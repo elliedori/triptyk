@@ -20,8 +20,10 @@
       <% end %>
       </span>
   </div>
-    <img src= <%= @link %> alt="Image of place"/>
-
+    <img src= <%= @main_link %> alt="Image of place"/>
+    <% @traid_links.each do |link| %>
+      <div class="triad"><img src= <%= link %> alt="Image of place"/></div>
+    <% end %>
   <!-- embedded youtube video -->
   <div id="youtube">
     <iframe id="youtube-video"
