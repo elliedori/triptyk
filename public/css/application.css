@@ -58,9 +58,17 @@ button {
   top: 110px;
 }
 
+img.triad {
+  width: 32%;
+  height: 230px;
+}
+
+/*.triad-block {
+  display: flex;
+  justify-content: space-between;
+}
+*/
 .wanderlist-button {
-  /*margin-left: 200px;*/
-  /*margin-left: 80%;*/
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
@@ -68,47 +76,19 @@ button {
   height: 50px;
   width: 50px;
   border: none;
- /* position: fixed;*/
-  /*margin-top: 20%;*/
-/*  margin-left: 2%;*/
 }
 
 button.unselected {
   background-image: url(../images/heart_unselected.png);
-/*  background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: 50% 50%;
-  background-color: transparent;
-  height: 50px;
-  width: 50px;
-  border: none;
-  position: fixed;
-  margin-top: -4.4%;
-  margin-left: 2%;*/
-
 }
+
 button.unselected:focus {
   outline:0;
 }
 
 button.selected {
   background-image: url(../images/heart_selected.png);
-/*  background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: 50% 50%;
-  background-color: transparent;
-  height: 50px;
-  width: 50px;
-  border: none;
-  position: fixed;
-  margin-top: -4.4%;
-  margin-left: 2%;*/
 }
-
-/* need to anchor this to the actual title,
-  button needs to be to the right by however many pixels
-  of the title, not of the left margin
-*/
 
 button.selected:focus {
   outline:0;
