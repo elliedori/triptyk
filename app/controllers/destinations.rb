@@ -9,11 +9,12 @@ get '/destinations/:name' do
   @destination = params[:name]
   @destination.gsub!("%20", " ")
 
-  youtube_obj = YouTubeCustomSearch.custom_search("traditional #{@destination} music")
-  @video_id = youtube_obj["items"][0]["id"]["videoId"]
-
   @details = @destination.split(", ")
   @found_place = @details.find{|query| Unsplash::Photo.search(query).first }
+  puts "****"
+  p @details.last
+  youtube_obj = YouTubeCustomSearch.custom_search("traditional #{@details.last} music")
+  @video_id = youtube_obj["items"][0]["id"]["videoId"]
 
   if @found_place == nil
     @error = "Please enter a more general location"
