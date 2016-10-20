@@ -31,4 +31,13 @@ helpers do
     links
   end
 
+  def restaurant_cleaner(restos)
+    all_details = []
+    restos.each do |resto|
+      details = [resto.name, resto.url, resto.location.display_address, resto.image_url]
+      all_details << details
+    end
+    all_details
+  end
+
 end

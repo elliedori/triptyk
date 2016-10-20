@@ -34,4 +34,14 @@
     ></iframe>
   </div>
 
+  <div id="restos">
+    <% @resto_details.each do |resto| %>
+      <h4><a href="<%= resto[1] %>"><%= resto[0] %></a></h4>
+        <p><%= resto[2][0] %></p>
+        <p><%= resto[2][1] %></p>
+        <p><%= resto[2][2] %></p>
+    <% end %>
+
+  </div>
+
 </div>
