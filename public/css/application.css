@@ -36,7 +36,14 @@ img {
 
 #restos {
   width: 100%;
-  /*justify-content: space-around;*/
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.resto-details {
+  width: calc(33% - 1em);
+  text-align: center;
 }
 
 #place-name {
@@ -62,16 +69,20 @@ button {
   top: 110px;
 }
 
-img.triad {
-  width: 32%;
-  height: 230px;
+.triad-block {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-/*.triad-block {
-  display: flex;
-  justify-content: space-between;
+.triad {
+  width: calc(33% - 1em);
+  height: 240px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
-*/
+
 .wanderlist-button {
   background-repeat: no-repeat;
   background-size: 40%;
