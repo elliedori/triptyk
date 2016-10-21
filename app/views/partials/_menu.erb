@@ -1,5 +1,5 @@
 <% if logged_in? %>
-  <span><%= User.find(session[:id]).first_name %> <%= User.find(session[:id]).last_name %></span>
+  <span id="username"><%= User.find(session[:id]).first_name %> <%= User.find(session[:id]).last_name %></span>
   <br/>
   <a href="../my_wanderlist">My Wanderlist</a>
   <br/>

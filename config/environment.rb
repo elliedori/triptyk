@@ -13,7 +13,7 @@ require 'dotenv'
   Dotenv.load
 require 'uri'
 require 'pathname'
-
+require 'yelp'
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -66,6 +66,11 @@ class YouTubeCustomSearch
   def self.custom_search( query_string )
     self.get( '',  query: { q: query_string } )
   end
-
 end
 
+Yelp.client.configure do |config|
+  config.consumer_key = ENV['YELP_CONSUMER_KEY']
+  config.consumer_secret = ENV['YELP_CONSUMER_SECRET']
+  config.token = ENV['YELP_TOKEN']
+  config.token_secret = ENV['YELP_TOKEN_SECRET']
+end

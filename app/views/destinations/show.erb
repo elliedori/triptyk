@@ -1,33 +1,50 @@
 <div clas="container">
 
-<div id="location-header">
-  <h2 id="place-name"><%= @destination.capitalize %></h2>
+  <div id="location-header">
+    <h2 id="place-name"><%= @destination %></h2>
 
-    <span id="heart-buttons">
-    <% if logged_in? %>
-      <% if !@current_users_list.include?(@destination) %>
-        <form class="add-to-wanderlist" action="../my_wanderlist/<%= @destination %>" method="POST">
-        <input type="hidden" name="_method" value="put">
-        <button class="wanderlist-button unselected" type="submit"><!-- Add to my wander list --></button>
+      <span id="heart-buttons">
+      <% if logged_in? %>
+        <% if !@current_users_list.include?(@destination) %>
+          <form class="add-to-wanderlist" action="../my_wanderlist/<%= @destination %>" method="POST">
+          <input type="hidden" name="_method" value="put">
+          <button class="wanderlist-button unselected" type="submit"><!-- Add to my wander list --></button>
+          </form>
+
+        <% else %>
+          <form class="remove-from-wanderlist" action="../my_wanderlist/<%= @destination %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
         </form>
-
-      <% else %>
-        <form class="remove-from-wanderlist" action="../my_wanderlist/<%= @destination %>" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button class="wanderlist-button selected" type="submit"><!-- Remove from my wander list --></button>
-      </form>
+        <% end %>
       <% end %>
-    <% end %>
-    </span>
-</div>
-  <img src= <%= @link %> alt="Image of place"/>
+      </span>
+  </div>
+    <img src= <%= @main_link %> alt="Image of place"/>
+    <div class="triad-block">
+      <% @traid_links.each do |link| %>
+        <img class="triad" src= <%= link %> alt="Image of place"/>
+      <% end %>
+    </div>
+  <!-- embedded youtube video -->
+  <div id="youtube">
+    <iframe id="youtube-video"
+            width="640" height="360"
+            src="https://www.youtube.com/embed/<%= @video_id %>?enablejsapi=1"
+    ></iframe>
+  </div>
 
-<!-- embedded youtube video -->
-<iframe id="existing-iframe-example"
-        width="640" height="360"
-        src="https://www.youtube.com/embed/<%= @video_id %>?enablejsapi=1"
-        frameborder="0"
-        style="border: solid 4px #37474F"
-></iframe>
+  <div id="restos">
+    <% @resto_details.each do |resto| %>
+      <div class="resto-details">
+          <h4><a target="_blank" href="<%= resto[1] %>"><%= resto[0] %></a></h4>
+          <p><%= resto[2][0] %><br/>
+          <%= resto[2][1] %><br/>
+          <%= resto[2][2] %><br/><br/>
+          <%= resto[3] %><br/></p>
+        </div>
+    <% end %>
+
+  </div>
 
 </div>

@@ -20,6 +20,11 @@ get '/logout' do
   logout
 end
 
+get '/resources' do
+  erb :resources
+end
+
 not_found do
   erb :not_found
 end
+

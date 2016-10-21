@@ -12,6 +12,7 @@ gem 'activerecord', '~>4.2.0'
 gem 'json'
 gem 'rake'
 gem 'pry'
+gem 'yelp'
 
 gem 'shotgun', '~>0.9.1'
 gem 'unsplash'
