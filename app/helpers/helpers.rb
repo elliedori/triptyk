@@ -34,7 +34,7 @@ helpers do
   def restaurant_cleaner(restos)
     all_details = []
     restos.each do |resto|
-      details = [resto.name, resto.url, resto.location.display_address, resto.image_url]
+      details = [resto.name, resto.url, resto.location.display_address, resto.display_phone[3..-1]]
       all_details << details
     end
     all_details
