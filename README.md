@@ -14,6 +14,10 @@ Upon entering the name of a location, users see photos from that place, traditio
   * Youtube Embedded Player e(traditional music videos)
   * Google Place Autocomplete (predicative location search)
   
+## Technologies used
+  
+  Triptyk was built on a Sinatra backend, with HTML, CSS, and JQuery on the frontend.
+  
 ## Current functionality
 
   * User authentication
@@ -25,7 +29,3 @@ Upon entering the name of a location, users see photos from that place, traditio
   * Refine search to only accept locations
   * Refine API query algorithms to get more precise content
   * Update styling to use color blocking for each section of content
-  
-## Technologies used
-  
-  Triptyk was built on a Sinatra backend, with HTML, CSS, and JQuery on the frontend.
