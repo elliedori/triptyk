@@ -24,7 +24,7 @@ Upon entering the name of a location, users see photos from that place, traditio
 
   * Refine search to only accept locations
   * Refine API query algorithms to get more precise content
-   * Update styling to use color blocking for each section of content
+  * Update styling to use color blocking for each section of content
   
 ## Technologies used
   
