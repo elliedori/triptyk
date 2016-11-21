@@ -23,7 +23,7 @@ helpers do
 
   def triptyk_maker(unsplash_arr)
     num_of_triads = unsplash_arr.length / 3
-    traids = unsplash_arr[0..num_of_triads*3]
+    traids = unsplash_arr[0..((num_of_triads*3)-1)]
     links = []
     traids.each do |triad|
       links << extract_link(triad)

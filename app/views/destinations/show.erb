@@ -35,6 +35,7 @@
   </div>
 
   <div id="restos">
+  <% if @resto_details %>
     <% @resto_details.each do |resto| %>
       <div class="resto-details">
           <h4><a target="_blank" href="<%= resto[1] %>"><%= resto[0] %></a></h4>
@@ -44,6 +45,8 @@
           <%= resto[3] %><br/></p>
         </div>
     <% end %>
+
+  <% end %>
 
   </div>
 
