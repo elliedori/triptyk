@@ -5,7 +5,9 @@
   * travelers who want to get a feel for a place before they commit to going
   * people who have no vacation days left but want to immerse themselves in another culture
   
-Upon entering the name of a location, users see photos from that place, traditional music from that country, as well as restuarants in their area that serve that country's food.
+Upon entering the name of a location, users see photos from that place, traditional music from that country, as well as restaurants in their area that serve that country's food.
+
+![Triptyk](http://i.imgur.com/Nvmolhq.gif)
 
 ## API's consumed
 
