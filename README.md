@@ -6,7 +6,7 @@
   * people who have no vacation days left but want to immerse themselves in another culture
   
 Upon entering the name of a location, users see photos from that place, traditional music from that country, as well as restaurants in their area that serve that country's food.
-
+![Trips](http://i.imgur.com/mCDq5Qi.mp4)
 ![Triptyk](http://i.imgur.com/mCDq5Qi.gif)
 
 ## API's consumed
