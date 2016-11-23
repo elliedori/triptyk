@@ -7,7 +7,7 @@
   
 Upon entering the name of a location, users see photos from that place, traditional music from that country, as well as restuarants in their area that serve that country's food.
 
-![Triptyk](http://i.imgur.com/b28by6h.gif)
+(http://i.imgur.com/b28by6h.gif)
 
 ## API's consumed
 
